@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-cream-50 text-ink font-sans;
+    background:
+      radial-gradient(1200px 600px at 100% -10%, rgba(201, 169, 110, 0.08), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(235, 216, 208, 0.35), transparent 60%),
+      #FBF7F0;
+  }
+
+  ::selection {
+    @apply bg-gold-300/40 text-ink;
+  }
+
+  h1, h2, h3 { @apply font-serif; }
+
+  /* Scrollbars */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #C9A96E, #A98841);
+    border-radius: 999px;
+    border: 2px solid #FBF7F0;
+  }
+}
+
+@layer components {
+  .container-luxe {
+    @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply text-[11px] uppercase tracking-luxe text-gold-500 font-medium;
+  }
+
+  .display-1 {
+    @apply font-display text-[clamp(2.6rem,6vw,5.5rem)] leading-[1.02] tracking-tight;
+  }
+
+  .display-2 {
+    @apply font-display text-[clamp(2rem,4vw,3.5rem)] leading-[1.05] tracking-tight;
+  }
+
+  .lead {
+    @apply text-ink-muted text-[15px] sm:text-[16px] leading-relaxed;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 text-[12px]
+           uppercase tracking-luxe font-medium transition-all duration-500 ease-luxe
+           border focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-300
+           focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink text-cream-50 border-ink hover:bg-gold-500 hover:border-gold-500;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold-500 text-white border-gold-500 hover:bg-ink hover:border-ink shadow-gold;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-ink border-ink/20 hover:bg-ink hover:text-cream-50 hover:border-ink;
+  }
+
+  .btn-light {
+    @apply btn bg-cream-50 text-ink border-cream-50 hover:bg-ink hover:text-cream-50 hover:border-ink;
+  }
+
+  .link-luxe {
+    @apply relative inline-block transition-colors duration-300 hover:text-gold-500
+           after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px
+           after:w-full after:bg-current after:scale-x-0 after:origin-right
+           after:transition-transform after:duration-500 hover:after:scale-x-100
+           hover:after:origin-left;
+  }
+
+  .card-product {
+    @apply  relative block overflow-hidden bg-cream-100;
+  }
+
+  .product-img {
+    @apply h-full w-full object-cover transition-transform duration-[1200ms] ease-luxe
+           group-hover:scale-[1.06];
+  }
+
+  .luxe-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-gold-300/60 to-transparent;
+  }
+
+  .glass {
+    @apply backdrop-blur-md bg-cream-50/70 border border-white/40;
+  }
+
+  .input-luxe {
+    @apply w-full bg-transparent border-b border-ink/20 px-0 py-3 text-[15px]
+           placeholder:text-ink/40 focus:outline-none focus:border-gold-500
+           transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 3px 3px; opacity: 0.35;
+  }
+}
