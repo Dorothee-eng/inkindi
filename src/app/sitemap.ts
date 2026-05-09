@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { PRODUCTS, COLLECTIONS } from '@/data/products';
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://inkindi.com';
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://inkindi.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date();

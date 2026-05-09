@@ -19,7 +19,7 @@ const cormorant = Cormorant_Garamond({
 const SITE = {
   name: 'INKINDI',
   tagline: 'Modern Luxury Jewelry, Rooted in African Heritage',
-  url: 'https://inkindi.com',
+  url: 'https://inkindi.vercel.app',
   description:
     'INKINDI is a modern luxury jewelry house designing necklaces, earrings, rings and bracelets for the contemporary woman. Hand-finished, ethically sourced, and rooted in African heritage.',
 };
