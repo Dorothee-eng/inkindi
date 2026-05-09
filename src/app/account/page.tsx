@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 
 import Link from 'next/link';
 import { User, Package, Heart, MapPin, Settings } from 'lucide-react';
