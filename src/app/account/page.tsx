@@ -1,13 +1,7 @@
-"use client";
-import type { Metadata } from 'next';
+
 import Link from 'next/link';
 import { User, Package, Heart, MapPin, Settings } from 'lucide-react';
 import FadeIn from '@/components/motion/FadeIn';
-
-export const metadata: Metadata = {
-  title: 'Account',
-  description: 'Sign in to your INKINDI account to track orders, manage your addresses, and view your wishlist.',
-};
 
 const cards = [
   { Icon: Package, title: 'Orders', body: 'Track current orders and revisit your history.', href: '#' },
