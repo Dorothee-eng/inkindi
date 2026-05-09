@@ -58,10 +58,10 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=80',
+        url: '/og.png',
         width: 1200,
         height: 630,
-        alt: SITE.name,
+        alt: `${SITE.name} — ${SITE.tagline}`,
       },
     ],
     locale: 'en_US',
@@ -70,9 +70,19 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
+    images: ['/og.png'],
   },
   alternates: { canonical: SITE.url },
-  icons: { icon: '/favicon.ico' },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.ico',
+  },
+  verification: {
+    // Paste the token Google Search Console gives you under
+    // "HTML tag" verification (the value of the content="..." attribute):
+    // google: 'YOUR-GOOGLE-SEARCH-CONSOLE-TOKEN',
+  },
   formatDetection: { telephone: false, address: false, email: false },
   category: 'Fashion',
 };
